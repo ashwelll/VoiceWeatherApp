@@ -1,0 +1,228 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset Default Styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body{
+  font-family: 'Poppins', sans-serif;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+
+  transition: background 0.5s ease;
+
+  overflow: hidden;
+}
+
+/* Main Weather Card */
+.weather-container{
+  width: 350px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  color: white;
+
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+/* App Title */
+.title{
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Weather Icon */
+.weather-icon{
+  font-size: 70px;
+  margin-bottom: 10px;
+
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float{
+  0%{
+    transform: translateY(0px);
+  }
+
+  50%{
+    transform: translateY(-10px);
+  }
+
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+/* City Name */
+#city{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* Temperature */
+#temperature{
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+/* Weather Condition */
+#condition{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Weather Details */
+.details{
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+/* Detail Boxes */
+.detail-box{
+  width: 48%;
+
+  background: rgba(255,255,255,0.15);
+
+  padding: 15px;
+
+  border-radius: 12px;
+}
+
+/* Icons Inside Detail Box */
+.detail-box i{
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Loader Spinner */
+.loader{
+  width: 50px;
+  height: 50px;
+
+  border: 5px solid rgba(255,255,255,0.3);
+
+  border-top: 5px solid white;
+
+  border-radius: 50%;
+
+  margin: 20px auto;
+
+  display: none;
+
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* Voice Button */
+#voiceBtn{
+  background: white;
+
+  color: #333;
+
+  border: none;
+
+  padding: 14px 25px;
+
+  border-radius: 50px;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  margin-top: 10px;
+}
+
+/* Voice Button Hover */
+#voiceBtn:hover{
+  transform: scale(1.05);
+
+  background: #f1f1f1;
+}
+
+/* Microphone Icon */
+#voiceBtn i{
+  margin-right: 8px;
+}
+
+/* Instruction Text */
+.instruction{
+  margin-top: 20px;
+
+  font-size: 14px;
+
+  opacity: 0.9;
+}
+
+/* SUNNY BACKGROUND */
+.sunny{
+  background: linear-gradient(to right, #f7971e, #ffd200);
+}
+
+/* CLOUDY BACKGROUND */
+.cloudy{
+  background: linear-gradient(to right, #757f9a, #d7dde8);
+}
+
+/* RAINY BACKGROUND */
+.rainy{
+  background: linear-gradient(to right, #373b44, #4286f4);
+}
+
+/* SNOW BACKGROUND */
+.snowy{
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+
+/* Responsive Design */
+@media(max-width: 400px){
+
+  .weather-container{
+    width: 90%;
+    padding: 20px;
+  }
+
+  #temperature{
+    font-size: 45px;
+  }
+
+  .title{
+    font-size: 24px;
+  }
+
+}
